@@ -50,4 +50,9 @@ model.fit(train_features, train_data["sentiment"])
 y_pred = model.predict(test_features)
 accuracy = accuracy_score(test_data["sentiment"],y_pred)
 
-print("Accuracy of text classification for imdb dataset: {:.2f}".format(accuracy*100))
+print("Accuracy of text classification for imdb dataset: {:.2f}".format(accuracy*100))				#Obtained accuracy = 83.68%
+
+
+ypred = model.predict(train_features)
+accuracy = accuracy_score(train_data["sentiment"], ypred)
+print("Accuracy of text classification for imdb dataset: {:.2f}".format(accuracy*100))				#Obtained accuracy = 100%
